@@ -1,3 +1,15 @@
+# Hi Nathan
+# Nice work! thank you for sharing!
+#
+# A few comments on the code below:
+# a. you have zero comments in the code. at least before function definitions specify the intent and of the function. 
+#    Will make it easier when someone tries to use it in the future
+# b. lots of code duplication - e.g. in write_blast_standard where you basically calculate the output twice (once for s_raw and once for f).
+#    better to write one function that returns a multi-line string (or list of strings) that you can later write to multiple files. 
+#    that way you only build the contents of the file once.
+# c. Some of the code usse elaborate string matching calculations (e.g. write_sequence). Would be simpler to use the 're' library
+
+
 import os
 _line_length = 80
 stan_dir = "BLASTStandard"
